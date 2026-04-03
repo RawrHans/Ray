@@ -281,6 +281,17 @@ footer .column > a:hover {
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* TABLET & MEDIUM DEVICES */
 @media (width < 900px) {
   .nav-links {
     display: none;
@@ -314,6 +325,7 @@ footer .column > a:hover {
   }
 }
 
+/* SMALL DEVICES */
 @media (width < 600px) {
   header .image::before {
     display: none;
@@ -329,13 +341,14 @@ footer .column > a:hover {
   }
 }
 
+/* MOBILE DEVICES - PALING KECIL */
 @media (width < 480px) {
   /* Hide hire me button and photo on phone */
   .hire-me {
     display: none;
   }
-  header .image {
-    display: none;
+  .image {
+    display: none !important;
   }
 
   /* Tighter container padding */
@@ -409,25 +422,5 @@ footer .column > a:hover {
   .btn {
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* Menghilangkan scroll horizontal */
-  position: relative;
-} 
-
-@media (width < 480px) {
-  .image {
-    display: none;
-  }
-
-  .hire-me {
-    display: none;
   }
 }
